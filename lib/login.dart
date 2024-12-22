@@ -3,6 +3,7 @@ import 'package:shoppingla/practice.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
+  static const String id = 'Login';
 
   @override
   State<Login> createState() => _LoginState();
