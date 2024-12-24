@@ -33,7 +33,7 @@ class _LoginState extends State<Login> {
                     Image(
                       height: 65,
                       width: 90,
-                      image: AssetImage('images/image.png'),
+                      image: AssetImage('images/logo.png'),
                     ),
                     SizedBox(
                       width: 5,
@@ -44,7 +44,7 @@ class _LoginState extends State<Login> {
                         Text(
                           'Coding\'z',
                           style: TextStyle(
-                            color: Color.fromARGB(255, 17, 58, 105),
+                            color: Colors.orange,
                             fontWeight: FontWeight.bold,
                             fontSize: 26,
                           ),
@@ -52,7 +52,7 @@ class _LoginState extends State<Login> {
                         Text(
                           'Keyz',
                           style: TextStyle(
-                            color: Color.fromARGB(255, 17, 58, 105),
+                            color: Colors.orange,
                             fontWeight: FontWeight.bold,
                             fontSize: 26,
                           ),
@@ -68,7 +68,7 @@ class _LoginState extends State<Login> {
                   child: Text(
                     'Login',
                     style: TextStyle(
-                      color: Color.fromARGB(255, 17, 58, 105),
+                      color: Colors.orange,
                       fontSize: 26,
                     ),
                   ),
@@ -81,7 +81,7 @@ class _LoginState extends State<Login> {
                     textAlign: TextAlign.center,
                     'Food is Love & Love iS Food.',
                     style: TextStyle(
-                      color: Color.fromARGB(255, 17, 58, 105),
+                      color: Colors.orange,
                       fontSize: 10,
                     ),
                   ),
@@ -97,20 +97,18 @@ class _LoginState extends State<Login> {
                       hintStyle: const TextStyle(
                         color: Color.fromARGB(255, 212, 209, 216),
                       ),
-                      fillColor: const Color.fromARGB(255, 20, 8, 70),
+                      fillColor: Colors.orange,
                       filled: true,
                       prefix: const Icon(
                         Icons.email_rounded,
                         color: Color.fromARGB(255, 177, 160, 214),
                       ),
                       focusedBorder: OutlineInputBorder(
-                        borderSide: const BorderSide(
-                            color: Color.fromARGB(255, 33, 5, 85)),
+                        borderSide: const BorderSide(color: Colors.orange),
                         borderRadius: BorderRadius.circular(10),
                       ),
                       enabledBorder: OutlineInputBorder(
-                        borderSide: const BorderSide(
-                            color: Color.fromARGB(255, 33, 5, 85)),
+                        borderSide: const BorderSide(color: Colors.orange),
                         borderRadius: BorderRadius.circular(10),
                       ),
                     ),
@@ -127,20 +125,18 @@ class _LoginState extends State<Login> {
                       hintStyle: const TextStyle(
                         color: Color.fromARGB(255, 212, 209, 216),
                       ),
-                      fillColor: const Color.fromARGB(255, 20, 8, 70),
+                      fillColor: Colors.orange,
                       filled: true,
                       prefix: const Icon(
                         Icons.ac_unit_rounded,
                         color: Color.fromARGB(255, 177, 160, 214),
                       ),
                       focusedBorder: OutlineInputBorder(
-                        borderSide: const BorderSide(
-                            color: Color.fromARGB(255, 33, 5, 85)),
+                        borderSide: const BorderSide(color: Colors.orange),
                         borderRadius: BorderRadius.circular(10),
                       ),
                       enabledBorder: OutlineInputBorder(
-                        borderSide: const BorderSide(
-                            color: Color.fromARGB(255, 33, 5, 85)),
+                        borderSide: const BorderSide(color: Colors.orange),
                         borderRadius: BorderRadius.circular(10),
                       ),
                     ),
@@ -171,7 +167,7 @@ class _LoginState extends State<Login> {
                     Text(
                       'sign up?',
                       textAlign: TextAlign.center,
-                      style: TextStyle(color: Colors.blue),
+                      style: TextStyle(color: Colors.orange),
                     ),
                   ],
                 ),

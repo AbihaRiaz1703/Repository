@@ -16,6 +16,7 @@ class _PracticeState extends State<Practice> {
         length: 3,
         child: Scaffold(
             appBar: AppBar(
+              backgroundColor: Colors.orange,
               title: Text('list'),
               bottom: TabBar(
                 tabs: [
@@ -43,10 +44,23 @@ class _PracticeState extends State<Practice> {
               child: ListView(
                 children: [
                   ListTile(
-                    leading: Text('helooooooo'),
-                    title: Text('hehehe nice'),
-                    subtitle: Text('people'),
-                    trailing: Text('hehenice'),
+                    leading: CircleAvatar(
+                      backgroundImage: AssetImage('images/Spac.png'),
+                    ),
+                    trailing: Text('Killer Menu'),
+                    title: Text('Our Specials'),
+                    subtitle: Text('Halloween Kits!'),
+                    onTap: () {
+                      Navigator.pushNamed(context, Food.id);
+                    },
+                  ),
+                  ListTile(
+                    leading: CircleAvatar(
+                      backgroundImage: AssetImage('images/Spac.png'),
+                    ),
+                    trailing: Text('Easy Menu'),
+                    title: Text('Kids Specials'),
+                    subtitle: Text('Toys Available'),
                     onTap: () {
                       Navigator.pushNamed(context, Food.id);
                     },
@@ -55,21 +69,70 @@ class _PracticeState extends State<Practice> {
               ),
             )),
             body: TabBarView(children: [
-              ListView.builder(itemBuilder: (context, index) {
-                return ListTile(
-                  leading: Image(image: AssetImage('images/images(3).jpg')),
-                );
-              }),
-              ListView.builder(itemBuilder: (context, index) {
-                return ListTile(
-                  leading: Image(image: AssetImage('images/images(3).jpg')),
-                );
-              }),
-              ListView.builder(itemBuilder: (context, index) {
-                return ListTile(
-                  leading: Image(image: AssetImage('images/goku.jpg')),
-                );
-              })
+              ListView.builder(
+                  itemCount: 3,
+                  itemBuilder: (context, index) {
+                    return ListTile(
+                      leading: CircleAvatar(
+                        backgroundImage: AssetImage(index % 3 == 0
+                            ? 'images/goku.jpg'
+                            : index % 3 == 1
+                                ? 'images/blah.jpg'
+                                : 'images/hehe.png'),
+                      ),
+                      title: Text(index % 3 == 0
+                          ? 'Kindiko'
+                          : index & 3 == 1
+                              ? 'Lakmaino'
+                              : 'Sinaka'),
+                      subtitle: Text(index / 2 == 0
+                          ? 'by Jimmy O Yang'
+                          : 'by Kim Tae Jung'),
+                      trailing: Icon(Icons.event_available),
+                    );
+                  }),
+              ListView.builder(
+                  itemCount: 3,
+                  itemBuilder: (context, index) {
+                    return ListTile(
+                        title: Text(index % 3 == 0
+                            ? 'Bef Barbeque'
+                            : index & 3 == 1
+                                ? 'Steak'
+                                : 'Chicken'),
+                        subtitle: Text(index / 2 == 0
+                            ? 'by Harry Van Dusen'
+                            : 'by Colby Hans'),
+                        trailing: Icon(Icons.event_available),
+                        leading: CircleAvatar(
+                            backgroundImage: AssetImage(index % 3 == 0
+                                ? 'images/beef.png'
+                                : index % 3 == 1
+                                    ? 'images/lala.png'
+                                    : 'images/chick.png')));
+                  }),
+              ListView.builder(
+                  itemCount: 3,
+                  itemBuilder: (context, index) {
+                    return ListTile(
+                        title: Text(index % 3 == 0
+                            ? 'Bef Barbeque'
+                            : index & 3 == 1
+                                ? 'Steak'
+                                : 'Chicken'),
+                        subtitle: Text(index % 3 == 0
+                            ? 'by Harry Van Dusen'
+                            : index % 3 == 1
+                                ? 'by Jimmy O Yang'
+                                : 'by Colby Hans'),
+                        trailing: Icon(Icons.event_available),
+                        leading: CircleAvatar(
+                            backgroundImage: AssetImage(index % 3 == 0
+                                ? 'images/beef.png'
+                                : index % 3 == 1
+                                    ? 'images/goku.jpg'
+                                    : 'images/chick.png')));
+                  })
             ])));
   }
 }
