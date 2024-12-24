@@ -23,15 +23,28 @@ class _FoodState extends State<Food> {
             ),
           ),
           body: TabBarView(children: [
-            Text('hello'),
-            Text('hello'),
-            Text('hello'),
             ListView.builder(
-                itemCount: 20,
+                itemCount: 3,
                 itemBuilder: (context, index) {
                   return ListTile(
                     leading: Image(image: AssetImage('images/image copy.png')),
                   );
+                }),
+            ListView.builder(
+                itemCount: 3,
+                itemBuilder: (context, index) {
+                  return ListTile(
+                    leading: Image(image: AssetImage('images/image.png')),
+                  );
+                }),
+            ListView.builder(
+                itemCount: 3,
+                itemBuilder: (context, index) {
+                  return ListTile(
+                      leading: CircleAvatar(
+                          backgroundImage: AssetImage(index / 3 == 0
+                              ? 'images/image copy.png'
+                              : 'images/blah.jpg')));
                 })
           ]),
         ));
