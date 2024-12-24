@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:shoppingla/food.dart';
 
 class Practice extends StatefulWidget {
+  static const String id = '/practice';
   const Practice({super.key});
 
   @override
@@ -36,6 +38,22 @@ class _PracticeState extends State<Practice> {
                     ])
           ],
         ),
+        drawer: SafeArea(
+            child: Drawer(
+          child: ListView(
+            children: [
+              ListTile(
+                leading: Text('helooooooo'),
+                title: Text('hehehe nice'),
+                subtitle: Text('people'),
+                trailing: Text('hehenice'),
+                onTap: () {
+                  Navigator.pushNamed(context, Food.id);
+                },
+              ),
+            ],
+          ),
+        )),
         body: TabBarView(children: [
           Text('veg'),
           Text('Non-veg'),

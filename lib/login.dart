@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:shoppingla/practice.dart';
 
 class Login extends StatefulWidget {
+  static const String id = '/Login';
+
   const Login({super.key});
-  static const String id = 'Login';
 
   @override
   State<Login> createState() => _LoginState();
@@ -29,11 +30,11 @@ class _LoginState extends State<Login> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    // Image(
-                    //   height: 65,
-                    //   width: 90,
-                    //   image: AssetImage('image.png'),
-                    // ),
+                    Image(
+                      height: 65,
+                      width: 90,
+                      image: AssetImage('images/image.png'),
+                    ),
                     SizedBox(
                       width: 5,
                     ),
@@ -150,11 +151,7 @@ class _LoginState extends State<Login> {
                 ),
                 ElevatedButton(
                     onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const Practice(),
-                          ));
+                      Navigator.pushNamed(context, Practice.id);
                     },
                     child: Text('Let\'s Go!')),
                 const SizedBox(
